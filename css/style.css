@@ -1,0 +1,200 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #f5f6fa;
+}
+
+/* LOGO */
+.logo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 40px;
+}
+
+/* MENU */
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* BORDER */
+.line-1 {
+  border: 1px solid #e7eeff;
+  margin-bottom: 20px;
+}
+.line-2 {
+  margin-top: 20px;
+  border: 1px solid #e7eeff;
+}
+
+/* ITEM MENU */
+.list-item {
+  color: #202224;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ICON */
+.menu-item img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ICON HOVER */
+.list-item.dashboard:hover img {
+  content: url("../img/dashboard-icon-hover.png");
+}
+.list-item.penghuni:hover img {
+  content: url("../img/penghuni-icon-hover.png");
+}
+.list-item.kamar:hover img {
+  content: url("../img/kamar-icon-hover.png");
+}
+.list-item.pembayaran:hover img {
+  content: url("../img/pembayaran-icon-hover.png");
+}
+.list-item.pengaduan:hover img {
+  content: url("../img/pengaduan-icon-hover.png");
+}
+
+/* HOVER */
+.menu li:hover {
+  background-color: #f5f6fa;
+  color: #4880ff;
+}
+
+/* ACTIVE */
+.menu li.active {
+  background-color: #e7eeff;
+  color: #4880ff;
+}
+.list-item.dashboard.active img {
+  content: url("../img/dashboard-icon-hover.png");
+}
+.list-item.penghuni.active img {
+  content: url("../img/penghuni-icon-hover.png");
+}
+.list-item.kamar.active img {
+  content: url("../img/kamar-icon-hover.png");
+}
+.list-item.pembayaran.active img {
+  content: url("../img/pembayaran-icon-hover.png");
+}
+.list-item.pengaduan.active img {
+  content: url("../img/pengaduan-icon-hover.png");
+}
+.list-item.logout.active img {
+  content: url("../img/logout-icon-hover.png");
+}
+
+/* LOGOUT BTN */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  color: #202224;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+  margin-top: 220px;
+}
+.logout-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* LOGOUT BTN HOVER */
+.logout-btn:hover {
+  background-color: #f5f6fa;
+  color: #4880ff;
+}
+.logout-btn:hover img {
+  content: url("../img/logout-icon-hover.png");
+}
+
+/* USER */
+.user {
+  font-weight: bold;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .logo img {
+    width: 170px;
+    height: 35px;
+  }
+
+  .menu-item img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .menu-item {
+    font-size: 14px;
+  }
+
+  .logout-btn img {
+    width: 18px;
+    height: 18px;
+    font-size: 16px;
+  }
+
+  .logout-btn {
+    font-size: 16px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .logo img {
+    width: 160px;
+    height: 30px;
+  }
+
+  .menu-item img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .menu-item {
+    font-size: 12px;
+  }
+
+  .logout-btn img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .logout-btn {
+    font-size: 12px;
+  }
+}
