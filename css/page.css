@@ -97,6 +97,7 @@
     display: flex;
     gap: 10px;
     margin-bottom: 30px;
+    transition: all 0.3s ease;
 }
 
 .filter-btn {
@@ -111,6 +112,14 @@
 
 .filter-btn.active {
     background-color: #eef2ff;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-btn:hover {
+    background-color: #eef2ff;
+    border-color: transparent;
+    transition: all 0.3s ease;
 }
 
 /* CARD */
@@ -138,11 +147,13 @@
     font-weight: bold;
     padding: 4px 12px;
     border-radius: 6px;
+    align-content: center;
 }
 
 .badge-terisi {
     background: #e0f7e9;
     color: #1aa34a;
+    align-items: center;
 }
 
 .badge-kosong {
