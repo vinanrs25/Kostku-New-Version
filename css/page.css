@@ -81,6 +81,331 @@
   color: #9ca3af;
 }
 
+/* KAMAR PAGE */
+.btn-tambah {
+    background-color: #4379F2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Filter Tabs */
+.filter-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border: 1px solid #4379F2;
+    border-radius: 6px;
+    background: transparent;
+    color: #4379F2;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.filter-btn.active {
+    background-color: #eef2ff;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-btn:hover {
+    background-color: #eef2ff;
+    border-color: transparent;
+    transition: all 0.3s ease;
+}
+
+/* CARD */
+.card {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* CARD HEADER */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* BADGE */
+.badge {
+    background: #eef2ff;
+    color: #4379F2;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 6px;
+    align-content: center;
+}
+
+.badge-terisi {
+    background: #e0f7e9;
+    color: #1aa34a;
+    align-items: center;
+}
+
+.badge-kosong {
+    background: #fff4e5;
+    color: #ff9800;
+}
+
+/* BODY */
+.card-body {
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+}
+
+.card-type {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* PRICE */
+.card-price {
+    color: #4379F2;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.price-suffix {
+    font-size: 12px;
+    color: #888;
+}
+
+/* DIVIDER */
+.card-divider {
+    border-top: 1px solid #eee;
+    margin: 12px 0;
+}
+
+/* TENANT */
+.card-tenant {
+    margin-bottom: 10px;
+}
+
+.tenant-label {
+    font-size: 12px;
+    color: #888;
+}
+
+.tenant-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ACTIONS */
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* ICON BUTTON */
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.1s;
+}
+
+.btn-icon:hover {
+    transform: scale(1.1);
+}
+
+/* ICON COLORS */
+.edit-icon {
+    color: #A8A100;
+}
+
+.delete-icon {
+    color: #FF5C5C;
+}
+
+/* MODAL STYLING */
+.modal {
+  background-color: white;
+  width: 90%;
+  max-width: 450px;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+}
+
+.close-btn {
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-control:focus {
+  border-color: #4379F2;
+  background-color: #fff;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.modal-footer .btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  text-align: center;
+  border: none;
+}
+
+.btn-cancel {
+  background-color: transparent;
+  color: #4379F2;
+  border: 2px solid #4379F2;
+}
+
+.btn-save {
+  background-color: #4379F2;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #f24343;
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* OVERLAY MODAL */
+.overlay-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SUCCESS BOX */
+.success-box {
+  background: white;
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #4379F2;
+  border-radius: 50%;
+  color: #4379F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 24px;
+}
+
+.success-box p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+}
+
 /* PENGHUNI PAGE */
 
 @media (max-width: 1024px) {
