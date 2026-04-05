@@ -20,9 +20,10 @@
 }
 
 .page-title h1 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #4880ff;
+  font-size: 28px;
+  font-weight: bold;
+
+  color: #4880ff;
 }
 
 .page-title span {

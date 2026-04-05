@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/page.css" />
+    <link rel="stylesheet" href="../css/table.css" />
+    <link rel="stylesheet" href="../css/form.css" />
   </head>
   <body>
     <div class="main">
@@ -29,7 +31,7 @@
                 >Kelola data penghuni dan akun login</span
               >
             </div>
-            <button class="btn btn-primary" id="addPenghuniBtn">
+            <button class="btn btn-primary" id="addKamarBtn">
               Tambah Penghuni
             </button>
           </header>
@@ -46,12 +48,356 @@
             </div>
           </div>
 
-          <!-- CONTENT -->
-        </main>
+          <!-- TABLE -->
+          <div class="table-container">
+            <div class="table-wrapper">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Kode Penghuni</th>
+                    <th>No HP</th>
+                    <th>Nama Lengkap</th>
+                    <th>Kamar</th>
+                    <th>Tanggal Masuk</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>P001</td>
+                    <td>Anto Subagja</td>
+                    <td class="text-custom">081234567892</td>
+                    <td class="text-custom">KM001</td>
+                    <td class="text-custom">08/04/2026</td>
+                    <td class="aksi">
+                      <div class="actions-button">
+                        <button class="btn-icon select-icon">
+                          <img src="../img/select-icon.png" alt="select" />
+                        </button>
+
+                        <button class="btn-icon edit-icon">
+                          <img src="../img/edit-icon.png" alt="edit" />
+                        </button>
+
+                        <button class="btn-icon delete-icon">
+                          <img src="../img/delete-icon.png" alt="delete" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>P002</td>
+                    <td>Tono Sukamto</td>
+                    <td class="text-custom">081234567892</td>
+                    <td class="text-custom">KM002</td>
+                    <td class="text-custom">08/04/2026</td>
+                    <td class="aksi">
+                      <div class="actions-button">
+                        <button class="btn-icon select-icon">
+                          <img src="../img/select-icon.png" alt="select" />
+                        </button>
+
+                        <button class="btn-icon edit-icon">
+                          <img src="../img/edit-icon.png" alt="edit" />
+                        </button>
+
+                        <button class="btn-icon delete-icon">
+                          <img src="../img/delete-icon.png" alt="delete" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>P003</td>
+                    <td>Saifulloh Fattah</td>
+                    <td class="text-custom">081234567890</td>
+                    <td class="text-custom">KM003</td>
+                    <td class="text-custom">08/04/2026</td>
+                    <td class="aksi">
+                      <div class="actions-button">
+                        <button class="btn-icon select-icon">
+                          <img src="../img/select-icon.png" alt="select" />
+                        </button>
+
+                        <button class="btn-icon edit-icon">
+                          <img src="../img/edit-icon.png" alt="edit" />
+                        </button>
+
+                        <button class="btn-icon delete-icon">
+                          <img src="../img/delete-icon.png" alt="delete" />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- MODAL TAMBAH PENGHUNI -->
+    <div id="modal-TambahKamar" class="modal" style="display: none;">
+      <div class="modal-header">
+        <h2>Tambah Penghuni</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+
+      <form class="form-tambah-penghuni">
+        <div class="form-group">
+          <label>Nama</label>
+          <input type="text" class="form-control" placeholder="Masukkan nama lengkap" required>
+        </div>
+        
+        <div class="form-group">
+          <label>No HP</label>
+          <input type="number" class="form-control" placeholder="08xxxxxxxxxx" required>
+        </div>
+
+        <div class="form-group">
+          <label>Pilih Kamar</label>
+          <select class="form-control" required>
+            <option value="" disabled selected>Pilih Kamar</option>
+            <option value="km-001">KM001</option>
+            <option value="km-002">KM002</option>
+            <option value="km-003">KM003</option>
+            <option value="km-004">KM004</option>
+            <option value="km-005">KM005</option>
+            <option value="km-006">KM006</option>
+            <option value="km-007">KM007</option>
+            <option value="km-008">KM008</option>
+            <option value="km-009">KM009</option>
+            <option value="km-010">KM010</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Tanggal Masuk</label>
+          <input type="date" class="form-control" required>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cancel">Batal</button>
+          <button type="button" class="btn btn-next">Lanjut</button>
+        </div>
+      </form>
+    </div>
+
+     <!-- MODAL BUAT AKUN PENGHUNI -->
+  <div id="modalBuatAkunPenghuni" class="modal" style="display:none;">
+    <div class="modal-header">
+      <h2>Buat Akun Penghuni</h2>
+      <button class="close-btn">&times;</button>
+    </div>
+
+    <form class="form-tambah-penghuni" id="formAkunPenghuni">
+
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" placeholder="Masukkan username" required>
+      </div>
+
+      <div class="form-group password-group">
+  <label>Password</label>
+
+  <div class="password-wrapper">
+    <input
+      type="password"
+      class="form-control"
+      id="passwordPenghuni"
+      placeholder="Masukkan password" required
+    />
+
+    <img
+      src="../img/eye-close.png"
+      class="toggle-password-penghuni"
+      id="togglePasswordPenghuni"
+      alt="toggle password"
+    />
+  </div>
+</div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-cancel" id="btnBack">Kembali</button>
+        <button type="submit" class="btn btn-save">Simpan</button>
+      </div>
+
+    </form>
+  </div>
+
+    <!-- OVERLAY MODAL -->
+    <div id="overlayModal" class="overlay-modal" style="display: none;"></div>
+
+    <!-- SUCCESS OVERLAY -->
+    <div id="successOverlay" class="overlay-modal" style="display: none;">
+      <div class="success-box">
+        <div class="icon">✓</div>
+        <p>Kamar berhasil ditambahkan</p>
       </div>
     </div>
 
-    <!-- SCRIPT -->
+    <!-- MODAL DETAIL PENGHUNI -->
+  <div id="modalDetailPenghuni" class="modal" style="display:none;">
+    <div class="modal-header">
+      <h2>Detail Penghuni</h2>
+      <button class="close-btn">&times;</button>
+    </div>
+
+    <form class="form-grid">
+      <div class="form-flex">
+      <div class="form-group">
+        <label>Nama Lengkap</label>
+        <input type="text" class="form-control" id="detail-nama" readonly>
+      </div>
+
+      <div class="form-group">
+        <label>No HP</label>
+        <input type="text" class="form-control" id="detail-nohp" readonly>
+      </div>
+      
+      <div class="form-group">
+        <label>Kamar</label>
+        <input type="text" class="form-control" id="detail-kamar" readonly>
+      </div>
+
+      <div class="form-group">
+        <label>Tanggal Masuk</label>
+        <input type="text" class="form-control" id="detail-tanggal" readonly>
+      </div>
+      </div>
+
+      <div class="form-flex kanan">
+        <h2>Informasi Akun</h2>
+
+        <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control right" id="detail-username" readonly>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control right" id="detail-password" readonly>
+        <img 
+      src="../img/eye-close.png" 
+      class="toggle-password"
+      id="togglePassword"
+      alt="toggle password"
+    >
+      </div>
+      </div>
+    </form>
+
+    <div class="modal-footer-detail full">
+        <button type="button" class="btn btn-cancel btn-detail-close">Tutup</button>
+      </div>
+
+  </div>
+
+    <!-- MODAL EDIT PENGHUNI -->
+<div id="modalEditKamar" class="modal" style="display:none;">
+
+  <div class="modal-header">
+    <h2>Edit Penghuni</h2>
+    <button class="close-btn">&times;</button>
+  </div>
+
+  <form class="form-grid">
+
+    <div class="form-flex">
+
+      <div class="form-group">
+        <label>Nama Lengkap</label>
+        <input type="text" class="form-control" id="edit-nama" required>
+      </div>
+
+      <div class="form-group">
+        <label>No HP</label>
+        <input type="number" class="form-control" id="edit-nohp" required>
+      </div>
+
+      <div class="form-group">
+        <label>Kamar</label>
+        <input type="text" class="form-control" id="edit-kamar" required>
+      </div>
+
+      <div class="form-group">
+        <label>Tanggal Masuk</label>
+        <input type="date" class="form-control" id="edit-tanggal" required>
+      </div>
+
+    </div>
+    <div class="form-flex kanan">
+
+      <h2>Informasi Akun</h2>
+
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control right" id="edit-username" required>
+      </div>
+
+      <div class="form-group">
+
+        <label>Password</label>
+
+        <input 
+          type="password" 
+          class="form-control right" 
+          id="edit-password" 
+          required
+        >
+
+        <img
+          src="../img/eye-close.png"
+          class="toggle-password-edit"
+          id="togglePasswordEdit"
+        >
+
+      </div>
+
+    </div>
+  </form>
+  <div class="modal-footer full">
+      <button type="button" class="btn btn-cancel">Batal</button>
+      <button type="submit" class="btn btn-save">Simpan</button>
+    </div>
+
+</div>
+
+   <!-- MODAL DELETE KAMAR -->
+<div id="modalDeleteKamar" class="modal modal-delete" style="display: none;">
+  <div class="modal-header">
+    <h2>Konfirmasi Hapus</h2>
+    <button class="close-btn">&times;</button>
+  </div>
+
+  <div class="delete-content">
+    <p class="delete-text">
+      Apakah Anda yakin ingin menghapus data penghuni
+      <strong id="delete-nama">Saifulloh Fattah</strong>?
+      Tindakan ini tidak dapat dibatalkan.
+    </p>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-cancel-delete">Batal</button>
+    <button type="button" class="btn btn-delete">Hapus</button>
+  </div>
+</div>
+
+    <!-- SUCCESS OVERLAY EDIT -->
+    <div id="successOverlayEdit" class="overlay-modal" style="display: none;">
+      <div class="success-box">
+        <div class="icon">✓</div>
+        <p>Kamar berhasil diedit</p>
+      </div>
+    </div>
+
+    <!-- SUCCESS OVERLAY DELETE -->
+    <div id="successOverlayDelete" class="overlay-modal" style="display: none;">
+      <div class="success-box">
+        <div class="icon">✓</div>
+        <p>Kamar berhasil dihapus</p>
+      </div>
+    </div>
+        <!-- SCRIPT -->
     <script src="../js/main.js"></script>
   </body>
 </html>
