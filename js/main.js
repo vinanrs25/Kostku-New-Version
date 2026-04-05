@@ -266,3 +266,46 @@ document.addEventListener('DOMContentLoaded', () => {
   // Event tambahan: Tutup overlay jika area hitam diklik (optional)
   successOverlay?.addEventListener('click', () => toggleSuccess(false));
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modalDetail = document.getElementById('modalDetailKamar');
+  const overlay = document.getElementById('overlayModal');
+
+  // Fungsi Buka/Tutup
+  const toggleDetail = (show = false) => {
+    modalDetail.style.display = show ? 'block' : 'none';
+    overlay.style.display = show ? 'block' : 'none';
+  };
+
+  // Klik pada area Card
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.card');
+    const isActionBtn = e.target.closest('.actions');
+
+    // Jika yang diklik adalah card DAN bukan tombol edit/hapus
+    if (card && !isActionBtn) {
+      // Ambil data dari card
+      const nomor = card.querySelector('.card-title').innerText;
+      const tipe = card.querySelector('.card-type').innerText;
+      const harga = card.querySelector('.card-price').innerText.split('/')[0];
+      const penghuni = card.querySelector('.tenant-name').innerText;
+      const status = card.querySelector('.badge-terisi, .badge-kosong')?.innerText || "Kosong";
+
+      // Isi ke dalam modal detail
+      document.getElementById('det-nomor').innerText = nomor;
+      document.getElementById('det-tipe').innerText = tipe;
+      document.getElementById('det-harga').innerText = harga;
+      document.getElementById('det-penghuni').innerText = penghuni;
+      document.getElementById('det-status').innerText = status;
+      // Fasilitas bisa disesuaikan/ditambah data-attribute di HTML jika ingin dinamis
+      document.getElementById('det-fasilitas').innerText = "Lemari, WiFi, Kasur";
+
+      toggleDetail(true);
+    }
+
+    // Tutup Modal
+    if (e.target.classList.contains('close-btn') || e.target.classList.contains('close-detail') || e.target === overlay) {
+      toggleDetail(false);
+    }
+  });
+});
