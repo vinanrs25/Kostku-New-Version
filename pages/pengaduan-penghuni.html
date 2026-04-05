@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kostku - Kamar</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/page.css" />
+    <link rel="stylesheet" href="../css/form.css" />
+</head>
+<body>
+    <div class="main">
+    <!-- SIDEBAR -->
+    <div id="sidebar"></div>
+    <div id="overlay" class="overlay"></div>
+
+    <div class="main-content">
+        <!-- TOPBAR -->
+        <div id="topbar"></div>
+
+        <!-- PENGADUAN PAGE -->
+        <main class="page pengaduan-penghuni">
+        <section class="form-section card">
+            <h2 class="section-title">Buat Pengaduan Baru</h2>
+            <form id="formPengaduan">
+            <div class="form-group">
+                <label>Judul Pengaduan</label>
+                <input type="text" class="form-control" placeholder="Contoh: WiFi ngelag" required>
+            </div>
+            <div class="form-group">
+                <label>Deskripsi Pengaduan</label>
+                <textarea class="form-control" rows="4" placeholder="Jelaskan masalah Anda secara detail..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Kirim pengaduan</button>
+            </form>
+        </section>
+
+        <section class="history-section">
+            <h2 class="section-title">Riwayat pengaduan</h2>
+            <div class="grid-history">
+            <div class="card card-history">
+                <div class="icon-msg">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                </div>
+                <div class="history-content">
+                <h3 class="complaint-title">Lampu kamar mandi mati</h3>
+                <p class="complaint-desc">Lampu di kamar mandi tidak menyala</p>
+                </div>
+                <span class="status-badge badge-selesai">Selesai</span>
+            </div>
+            </div>
+        </section>
+        </main>
+
+        <div id="successOverlayPengaduan" class="overlay-modal" style="display: none;">
+        <div class="success-box">
+            <div class="icon">✓</div>
+            <p>Pengaduan berhasil dikirim</p>
+        </div>
+        </div>
+    </div>
+    </div>
+    
+    <!-- SCRIPT -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

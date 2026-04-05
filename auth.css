@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    background: url(img/bg-auth.png) no-repeat center/cover;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 700px;
+    margin: auto;
+    display: flex;
+    gap: 80px;
+}
+
+
+/* KONTEN KIRI */
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: clamp(150px, 20vw, 200px);
+    height: auto;
+}
+
+
+/* TEXT */
+
+.left h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    color: #4880FF;
+    max-width: 680px;
+}
+
+.left p {
+    font-size: clamp(14px, 1.5vw, 20px);
+    color: #333;
+    max-width: 680px;
+}
+
+
+/* IMAGE ILLUSTRATION */
+
+.illustration {
+    width: clamp(250px, 30vw, 420px);
+}
+
+
+/* KONTEN KANAN */
+
+.form-auth {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* FORM BOX */
+
+.form-box {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* TITLE FORM */
+
+.form-box h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 500;
+}
+
+.form-box p {
+    font-size: 19px;
+    color: #666;
+}
+
+.page-description {
+    font-size: clamp(13px, 1.5vw, 16px);
+    color: #666;
+}
+
+
+/* INPUT GROUP FORM */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group span {
+    font-size: clamp(12px, 1.2vw, 16px);
+    color: #666;
+}
+
+input,
+textarea {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #888;
+    font-size: clamp(13px, 1.2vw, 16px);
+}
+
+
+/* PASSWORD */
+
+.password-auth {
+    position: relative;
+}
+
+.password-auth input {
+    width: 100%;
+}
+
+.password-auth img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    cursor: pointer;
+}
+
+
+/* BUTTON SUBMIT */
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #4880FF;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* LOGIN TEXT */
+
+.login-text {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+}
+
+.login-text a {
+    color: #4880FF;
+    text-decoration: none;
+}
+
+
+/* TABLET */
+
+@media (max-widthh: 1024px) {
+    body {
+        padding: 30px;
+    }
+    .container {
+        gap: 60px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .container {
+        flex-direction: column;
+        padding: 25px;
+        gap: 30px;
+    }
+    .illustration {
+        display: none;
+    }
+    .form-box {
+        max-width: 100%;
+        box-shadow: none;
+    }
+}

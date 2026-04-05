@@ -1,0 +1,9 @@
+{
+    "window.zoomLevel": 1.5,
+    "editor.fontSize": 12,
+    "editor.wordWrap": "on",
+    "editor.formatOnSave":false,
+    "editor.defaultFormatter": null,
+    "javascript.format.enable": false,
+    "typescript.format.enable": false
+}

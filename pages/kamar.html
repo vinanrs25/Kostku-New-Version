@@ -7,6 +7,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/page.css" />
+    <link rel="stylesheet" href="../css/form.css" />
   </head>
   <body>
     <div class="main">
@@ -18,10 +20,238 @@
         <!-- TOPBAR -->
         <div id="topbar"></div>
 
-        <!-- CONTENT -->
-        <main class="content" id="content">
-          <h1>Kamar</h1>
+        <!-- KAMAR PAGE -->
+        <main class="page kamar-page" id="content">
+          <header class="page-header">
+            <div class="page-title">
+              <h1>Manajemen Kamar</h1>
+              <span class="page-description">Kelola kamar kost</span>
+            </div>
+            <button class="btn btn-primary" id="addKamarBtn">
+              Tambah Kamar
+            </button>
+          </header>
+
+          <!-- FILTER -->
+          <div class="filter-group">
+            <button class="filter-btn active">Semua</button>
+            <button class="filter-btn">Kosong</button>
+            <button class="filter-btn">Terisi</button>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="grid">
+
+            <!-- CARD 1 -->
+            <div class="card">
+              <div class="card-header">
+                  <div class="badge">
+                      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                  </div>
+                  <span class="badge badge-terisi">Terisi</span>
+              </div>
+
+              <div class="card-body">
+                <h3 class="card-title">Kamar KM001</h3>
+                <p class="card-type">Standard</p>
+
+                <div class="card-price">
+                  Rp500.000 <span class="price-suffix">/bulan</span>
+                </div>
+
+                <div class="card-divider"></div>
+
+                <div class="card-tenant">
+                  <p class="tenant-label">Penghuni</p>
+                  <p class="tenant-name">Anto Subagja</p>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button class="btn-icon edit-icon" title="Edit">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 20h9"/>
+                    <path d="M16.5 3.5a2.1 2.1 0 113 3L7 19l-4 1 1-4 12.5-12.5z"/>
+                  </svg>
+                </button>
+                <button class="btn-icon delete-icon" title="Hapus">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="3 6 5 6 21 6"/>
+                    <path d="M19 6l-1 14H6L5 6"/>
+                    <path d="M10 11v6M14 11v6"/>
+                    <path d="M9 6V4h6v2"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </main>
+      </div>
+    </div>
+
+    <!-- MODAL TAMBAH KAMAR -->
+    <div id="modal-TambahKamar" class="modal" style="display: none;">
+      <div class="modal-header">
+        <h2>Tambah Kamar</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label>Nomor Kamar</label>
+          <input type="text" class="form-control" placeholder="Contoh: KM001" required>
+        </div>
+
+        <div class="form-group">
+          <label>Tipe Kamar</label>
+          <select class="form-control" required>
+            <option value="" disabled selected>Tipe</option>
+            <option value="standard">Standard</option>
+            <option value="deluxe">Premium</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Harga per Bulan</label>
+          <input type="text" class="form-control" placeholder="Contoh: Rp500.000" required>
+        </div>
+
+        <div class="form-group">
+          <label>Fasilitas Kamar</label>
+          <input type="text" class="form-control" placeholder="Contoh: Lemari, WiFi, dll" required>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cancel">Batal</button>
+          <button type="submit" class="btn btn-save">Simpan</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- OVERLAY MODAL -->
+    <div id="overlayModal" class="overlay-modal" style="display: none;"></div>
+
+    <!-- SUCCESS OVERLAY -->
+    <div id="successOverlay" class="overlay-modal" style="display: none;">
+      <div class="success-box">
+        <div class="icon">✓</div>
+        <p>Kamar berhasil ditambahkan</p>
+      </div>
+    </div>
+
+    <!-- MODAL EDIT KAMAR -->
+    <div id="modalEditKamar" class="modal" style="display: none;">
+      <div class="modal-header">
+        <h2>Edit Kamar</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label>Nomor Kamar</label>
+          <input type="text" class="form-control" id="edit-nomor" placeholder="Contoh: KM001" required>
+        </div>
+
+        <div class="form-group">
+          <label>Tipe Kamar</label>
+          <select class="form-control" id="edit-tipe" required>
+            <option value="" disabled selected>Tipe</option>
+            <option value="standard">Standard</option>
+            <option value="deluxe">Premium</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Harga per Bulan</label>
+          <input type="text" class="form-control" id="edit-harga" value="Rp500.000" required>
+        </div>
+
+        <div class="form-group">
+          <label>Fasilitas Kamar</label>
+          <input type="text" class="form-control" id="edit-fasilitas" placeholder="Contoh: Lemari, WiFi, dll" required>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-cancel">Batal</button>
+          <button type="submit" class="btn btn-save">Simpan</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- MODAL DELETE KAMAR -->
+    <div id="modalDeleteKamar" class="modal" style="display: none;">
+      <div class="modal-header">
+        <h2>Konfirmasi Hapus</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+
+      <div style="text-align: center; padding: 20px;">
+        <p style="font-size: 16px; color: #666; margin-bottom: 30px;">
+          Apakah Anda yakin ingin menghapus kamar <strong id="delete-nomor">KM001</strong>?
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-cancel">Batal</button>
+        <button type="submit" class="btn btn-delete">Hapus</button>
+      </div>
+    </div>
+
+    <!-- MODAL DETAIL KAMAR -->
+    <div id="modalDetailKamar" class="modal" style="display: none;">
+      <div class="modal-header">
+        <h2>Detail Kamar</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+
+      <div class="form-group">
+        <label>Nomor Kamar</label>
+        <div class="detail-value" id="det-nomor">KM001</div>
+      </div>
+
+      <div class="form-group">
+        <label>Nama Penghuni</label>
+        <div class="detail-value" id="det-penghuni">Anto Subagja</div>
+      </div>
+
+      <div class="form-group">
+        <label>Tipe Kamar</label>
+        <div class="detail-value" id="det-tipe">Standard</div>
+      </div>
+
+      <div class="form-group">
+        <label>Status Kamar</label>
+        <div class="detail-value" id="det-status">Terisi</div>
+      </div>
+
+      <div class="form-group">
+        <label>Harga per Bulan</label>
+        <div class="detail-value" id="det-harga">Rp500.000</div>
+      </div>
+
+      <div class="form-group">
+        <label>Fasilitas Kamar</label>
+        <div class="detail-value" id="det-fasilitas">Lemari, WiFi</div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-full close-detail">Tutup</button>
+      </div>
+    </div>
+
+    <!-- SUCCESS OVERLAY EDIT -->
+    <div id="successOverlayEdit" class="overlay-modal" style="display: none;">
+      <div class="success-box">
+        <div class="icon">✓</div>
+        <p>Kamar berhasil diedit</p>
+      </div>
+    </div>
+
+    <!-- SUCCESS OVERLAY DELETE -->
+    <div id="successOverlayDelete" class="overlay-modal" style="display: none;">
+      <div class="success-box">
+        <div class="icon">✓</div>
+        <p>Kamar berhasil dihapus</p>
       </div>
     </div>
 

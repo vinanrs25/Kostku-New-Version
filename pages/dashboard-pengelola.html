@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kostku - Dashboard</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+
+<body>
+    <div class="main">
+        <!-- SIDEBAR -->
+        <div id="sidebar"></div>
+        <div id="overlay" class="overlay"></div>
+
+        <div class="main-content">
+            <!-- TOPBAR -->
+            <div id="topbar"></div>
+
+            <!-- DASHBOARD PAGE -->
+            <main class="page dashboard" id="content">
+                <!-- HEADER PAGE -->
+                <header class="page-header">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                        <span class="page-description">
+                          Selamat datang di Kostku
+                        </span>
+                    </div>
+                </header>
+
+                <!-- CONTENT -->
+
+                <!-- DASHBOARD - CARDS -->
+                <div class="dashboard-cards">
+                    <div class="dashboard-card card-yellow">
+                        <div class="card-header">
+                            <img src="../img/penghuni-dashboard-icon.png">
+                        </div>
+                        <h4>Total Penghuni</h4>
+                        <h2>3</h2>
+                    </div>
+                    <div class="dashboard-card card-green">
+                        <div class="card-header">
+                            <img src="../img/kamar-terisi-dashboard-icon.png">
+                        </div>
+                        <h4>Kamar Terisi</h4>
+                        <h2>3</h2>
+                    </div>
+                    <div class="dashboard-card card-red">
+                        <div class="card-header">
+                            <img src="../img/kamar-kosong-dashboard-icon.png">
+                        </div>
+                        <h4>Kamar Kosong</h4>
+                        <h2>3</h2>
+                    </div>
+                    <div class="dashboard-card card-blue">
+                        <div class="card-header">
+                            <img src="../img/pendapatan-dashboard-icon.png">
+                        </div>
+                        <h4>Pendapatan Bulan Ini</h4>
+                        <h2>Rp1.000.000</h2>
+                    </div>
+                </div>
+
+
+                <div class="dashboard-bottom">
+                    <!-- DASHBOARD - PEMBAYARAN -->
+                    <div class="dashboard-box">
+                        <div class="box-header">
+                            <h3>Pembayaran Terbaru</h3>
+                            <a href="pembayaran.html">Lihat Semua</a>
+                        </div>
+                        <div class="box-list">
+                            <div class="list-item">
+                                <span>P001 - Anto Subagja</span>
+                                <span>Rp500.000</span>
+                            </div>
+                            <div class="list-item">
+                                <span>P002 - Tono Sukamto</span>
+                                <span>Rp500.000</span>
+                            </div>
+                            <div class="list-item">
+                                <span>P003 - Saifullah Fattah</span>
+                                <span>Rp500.000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DASHBOARD - PENGADUAN -->
+                    <div class="dashboard-box">
+                        <div class="box-header">
+                            <h3>Pengaduan Terbaru</h3>
+                            <a href="pengaduan.html">Lihat Semua</a>
+                        </div>
+                        <div class="box-list">
+                            <div class="list-item">
+                                <span>P001 - Anto Subagja</span>
+                                <img src="../img/pengaduan-baru-icon.png">
+                            </div>
+                            <div class="list-item">
+                                <span>P002 - Tono Sukamto</span>
+                                <img src="../img/pengaduan-proses-icon.png">
+                            </div>
+                            <div class="list-item">
+                                <span>P003 - Saifullah Fattah</span>
+                                <img src="../img/pengaduan-selesai-icon.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

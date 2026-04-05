@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kostku - Pembayaran</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+</head>
+<body>
+    <style>
+        .notifikasi-page {
+  padding: 20px;
+}
+
+.page-title-blue {
+  color: #4f75ff; /* Warna biru sesuai gambar */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Base Card Notifikasi */
+.card-notification {
+  display: flex;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  gap: 15px;
+  transition: transform 0.2s;
+}
+
+.card-notification:hover {
+  background-color: #fafafa;
+}
+
+/* Icon Styles */
+.notif-icon-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px; /* Kotak melengkung sesuai gambar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Warna Icon Background */
+.bg-yellow { background-color: #fef9c3; color: #a16207; }
+.bg-red { background-color: #fee2e2; color: #ef4444; }
+
+/* Content Styles */
+.notif-content {
+  flex: 1;
+}
+
+.notif-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: #1a1a1a;
+}
+
+.notif-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.notif-time {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .card-notification {
+    padding: 15px;
+  }
+}
+    </style>
+    <div class="main">
+    <!-- SIDEBAR -->
+    <div id="sidebar"></div>
+    <div id="overlay" class="overlay"></div>
+
+    <div class="main-content">
+        <!-- TOPBAR -->
+        <div id="topbar"></div>
+
+        <!-- CONTENT -->
+        <main class="page notifikasi-page">
+        <header class="page-header">
+            <h1 class="page-title-blue">Notifikasi</h1>
+        </header>
+
+        <div class="notification-list">
+            <div class="card card-notification alert-warning">
+            <div class="notif-icon-wrapper">
+                <div class="icon-circle bg-yellow">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                </div>
+            </div>
+            <div class="notif-content">
+                <h3 class="notif-title">Pembayaran akan jatuh tempo 3 hari lagi</h3>
+                <p class="notif-desc">Pembayaran untuk periode April 2026 akan jatuh tempo 3 hari lagi (11 April 2026)</p>
+                <span class="notif-time">2 jam yang lalu</span>
+            </div>
+            </div>
+
+            <div class="card card-notification alert-danger">
+            <div class="notif-icon-wrapper">
+                <div class="icon-circle bg-red">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                </div>
+            </div>
+            <div class="notif-content">
+                <h3 class="notif-title">Pembayaran jatuh tempo hari ini</h3>
+                <p class="notif-desc">Jangan lupa untuk melakukan pembayaran periode Maret 2026</p>
+                <span class="notif-time">1 bulan yang lalu</span>
+            </div>
+            </div>
+        </div>
+        </main>
+    </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
