@@ -230,4 +230,82 @@ document.addEventListener('DOMContentLoaded', () => {
             form.reset();
         }, 2000);
     });
+  const modal = document.getElementById('modalBalas');
+  const overlay = document.getElementById('overlayModal');
+  const success = document.getElementById('successOverlayBalas');
+  const form = modal?.querySelector('form');
+
+  // Fungsi pembantu untuk sembunyi/munculkan elemen
+  const show = (el, isVisible, type = 'block') => {
+    if (el) el.style.display = isVisible ? type : 'none';
+  };
+
+  // 1. Gabungkan semua logika klik (Buka & Tutup)
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn-primary, .btn-cancel-outline, .close-btn');
+    const isOverlay = e.target === overlay;
+
+    // Tombol Buka Balas
+    if (btn?.innerText === 'Balas') {
+      const card = btn.closest('.card');
+      modal.querySelector('.detail-title').innerText = card.querySelector('.complaint-title').innerText;
+      modal.querySelector('.detail-meta').innerHTML = card.querySelector('.meta-info').innerHTML;
+      
+      [modal, overlay].forEach(el => show(el, true));
+    } 
+    // Tombol Tutup / Klik Luar
+    else if (btn?.classList.contains('btn-cancel-outline') || btn?.classList.contains('close-btn') || isOverlay) {
+      [modal, overlay].forEach(el => show(el, false));
+    }
+  });
+
+  // 2. Handle Submit Form
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Sembunyikan modal, munculkan sukses
+    [modal, overlay].forEach(el => show(el, false));
+    show(success, true, 'flex');
+
+    // Reset & Tutup sukses setelah 2 detik
+    setTimeout(() => {
+      show(success, false);
+      form.reset();
+    }, 2000);
+  });
+});
+
+// PENGADUAN PENGHUNI
+document.addEventListener('DOMContentLoaded', () => {
+  const formPengaduan = document.getElementById('formPengaduan');
+  const successOverlay = document.getElementById('successOverlayPengaduan');
+
+  // Fungsi untuk mengatur tampilan (Sembunyi/Muncul)
+  const toggleSuccess = (show = false) => {
+    if (successOverlay) {
+      successOverlay.style.display = show ? 'flex' : 'none';
+    }
+  };
+
+  // Handle Pengiriman Form
+  if (formPengaduan) {
+    formPengaduan.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // 1. Simulasi proses kirim (bisa ditambah Fetch/AJAX di sini)
+      console.log("Mengirim pengaduan...");
+
+      // 2. Munculkan overlay sukses
+      toggleSuccess(true);
+
+      // 3. Reset form dan tutup overlay setelah 2 detik
+      setTimeout(() => {
+        toggleSuccess(false);
+        formPengaduan.reset(); // Mengosongkan input & textarea
+      }, 2000);
+    });
+  }
+
+  // Event tambahan: Tutup overlay jika area hitam diklik (optional)
+  successOverlay?.addEventListener('click', () => toggleSuccess(false));
 });

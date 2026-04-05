@@ -448,6 +448,98 @@ select.form-control {
 /* PENGHUNI PAGE */
 
 
+/* PENGADUAN PENGHUNI */
+/* Container Utama */
+.pengaduan-penghuni {
+  padding: 20px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* Form Section */
+.form-section {
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Riwayat Section */
+.card-history {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 15px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+}
+
+.icon-msg {
+  background: #f0f4ff;
+  color: #4f75ff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.history-content {
+  flex: 1;
+}
+
+.complaint-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.complaint-desc {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 5px 0 0 0;
+}
+
+/* Status Badge */
+.badge-selesai {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 /* PENGADUAN PAGE */
 /* Container Grid untuk Kanan-Kiri */
 .grid-pengaduan {
@@ -517,17 +609,6 @@ select.form-control {
 
 /* Buttons */
 .button-group { display: flex; gap: 10px; }
-
-.btn {
-  flex: 1;
-  padding: 15px;
-  border-radius: 15px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
 .btn-primary { background: #4f75ff; color: white; }
 .btn-full { flex: 1; } /* Digunakan saat hanya ada 1 tombol */
 
@@ -883,4 +964,5 @@ select.form-control {
     .dashboard-bottom {
         grid-template-columns: 1fr;
     }
+}
 }
