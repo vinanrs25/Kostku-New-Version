@@ -448,8 +448,247 @@ select.form-control {
 /* PENGHUNI PAGE */
 
 
+/* PENGADUAN PAGE */
+/* Container Grid untuk Kanan-Kiri */
+.grid-pengaduan {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Base Card */
+.card-complaint {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.card-header-flex { display: flex; gap: 12px; }
+
+.icon-wrapper {
+  background-color: #f0f4ff;
+  color: #4f75ff;
+  padding: 8px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.content-header { flex: 1; }
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.complaint-title { font-size: 1.1rem; font-weight: 700; margin: 0; }
+.complaint-subtitle { font-size: 0.9rem; color: #777; margin: 0; }
+
+/* Status Badges */
+.badge { padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
+.badge-baru { background: #fee2e2; color: #ef4444; }
+.badge-proses { background: #fef9c3; color: #a16207; }
+.badge-selesai { background: #dcfce7; color: #15803d; }
+
+/* Meta Row (P001 | KM001 | Tgl) */
+.meta-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.meta-divider { width: 1px; height: 14px; background-color: #eee; }
+
+/* Buttons */
+.button-group { display: flex; gap: 10px; }
+
+.btn {
+  flex: 1;
+  padding: 15px;
+  border-radius: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-primary { background: #4f75ff; color: white; }
+.btn-full { flex: 1; } /* Digunakan saat hanya ada 1 tombol */
+
+.btn-outline-warning {
+  background: transparent;
+  border: 1.5px solid #ffcc00;
+  color: #a16207;
+}
+
+.btn-outline-success {
+  background: transparent;
+  border: 1.5px solid #22c55e;
+  color: #15803d;
+}
+
+/* Container Modal Khusus */
+.modal {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 1px solid #f0f0f0;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Box Detail Pengaduan (Warna Biru Muda) */
+.complaint-detail-box {
+  background-color: #f0f4ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.detail-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.detail-desc {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 12px 0;
+}
+
+.detail-meta {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #888;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: 10px;
+}
+
+.meta-divider {
+  width: 1px;
+  height: 15px;
+  background-color: #ddd;
+}
+
+/* Form Styling */
+.label-respon {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.text-area-respon {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Footer & Buttons */
+.modal-footer-custom {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-cancel-outline {
+  flex: 1;
+  background: white;
+  border: 2px solid #4f75ff;
+  color: #4f75ff;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary-full {
+  flex: 1.5;
+  background-color: #4f75ff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary-full:hover {
+  background-color: #3f5ecf;
+}
+
+@media (max-width: 1024px) {
+  .page-title h1 {
+    font-size: 24px;
+  }
+
 /* DAHSBOARD PAGE */
 
+  .btn {
+    font-size: 12px;
+    padding: 14px 16px;
+  }
+  .searchbar {
+    padding: 8px;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 10px 32px;
+  }
+  .search-icon {
+    width: 12px;
+    height: 12px;
+  }
+  .grid-pengaduan {
+    grid-template-columns: 1fr;
+  }
 
 /* DASHBOARD - container cards */
 
