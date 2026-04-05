@@ -1,11 +1,66 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KOSTU - Register</title>
-  </head>
-  <body>
-    Register
-  </body>
+    <title>KOSTKU - Register Pengelola</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- PAGE KIRI -->
+        <div class="left">
+            <div class="logo">
+                <img src="img/logo-auth.png">
+            </div>
+            <h1>Kelola Kost Anda dengan Mudah</h1>
+            <p>Semua kebutuhan pengelolaan kos dalam satu sistem yang praktis dan terorganisir.</p>
+            <img src="img/ornament-auth.png" class="illustration">
+        </div>
+
+        <!-- PAGE KANAN -->
+        <div class="form-auth">
+            <div class="form-box">
+                <h2>Daftar Pengelola</h2>
+                <span class="page-description">Buat akun untuk mengelola kost Anda.</span>
+                <br>
+                <form class="form-for-auth" id="form-for-auth">
+                    <div class="input-group">
+                        <span>Nama Pengelola</span>
+                        <input type="text" placeholder="Nama Pengelola" required>
+                    </div><br>
+                    <div class="input-group">
+                        <span>Username</span>
+                        <input type="text" placeholder="Username" required>
+                    </div><br>
+                    <div class="input-group">
+                        <span>Email</span>
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div><br>
+                    <div class="input-group">
+                        <span>Password</span>
+                        <div class="password-auth">
+                            <input type="password" id="password" placeholder="Password" required>
+                            <img src="img/eye-close.png" id="togglePassword">
+                        </div>
+                    </div><br>
+                    <div class="input-group">
+                        <span>Alamat Kost</span>
+                        <textarea placeholder="Alamat Kost" required></textarea>
+                    </div>
+                    <br><br>
+                    <button type="submit" class="btn">Daftar</button>
+                </form>
+                <div class="login-text">
+                    Sudah punya akun? <a href="login.html">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
 </html>
