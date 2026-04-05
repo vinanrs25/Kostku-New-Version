@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kostku - Dashboard</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/page.css">
+</head>
+
+<body>
+    <div class="main">
+        <!-- SIDEBAR -->
+        <div id="sidebar"></div>
+        <div id="overlay" class="overlay"></div>
+
+        <div class="main-content">
+            <!-- TOPBAR -->
+            <div id="topbar"></div>
+
+            <!-- DASHBOARD PAGE -->
+            <main class="page dashboard" id="content">
+                <!-- HEADER PAGE -->
+                <header class="page-header">
+                    <div class="page-title">
+                        <h1>Riwayat Pembayaran</h1>
+                        <span class="page-description">
+                          Berikut adalah riwayat pembayaran Anda
+                        </span>
+                    </div>
+                </header>
+
+                <!-- CONTENT -->
+                <!-- PEMBAYARAN -->
+                <div class="dashboard-box">
+                    <div class="box-header">
+                    </div>
+                    <div class="box-list">
+                        <div class="list-item">
+                            <span><b>Periode</b></span>
+                            <span><b>Tanggal Pembayaran</b></span>
+                            <span><b>Nominal</b></span>
+                            <span><b>Status</b></span>
+                        </div>
+                        <div class="list-item">
+                            <span>April 2026</span>
+                            <span>-</span>
+                            <span>Rp500.000</span>
+                            <span><img src="../img/status pembayaran-belum lunas.png" alt=""></span>
+                        </div>
+                        <div class="list-item">
+                            <span>Maret 2026</span>
+                            <span>-</span>
+                            <span>Rp500.000</span>
+                            <span><img src="../img/status pembayaran-lunas.png" alt=""></span>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+        </main>
+    </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
