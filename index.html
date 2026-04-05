@@ -1,11 +1,111 @@
+INDEX
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kostku</title>
-  </head>
-  <body>
-    HALO KOSTKU
-  </body>
+    <title>Kostku - Dashboard Pengelola</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/page.css">
+</head>
+
+<body>
+    <div class="main">
+        <!-- DASHBOARD PAGE -->
+        <main class="page dashboard" id="content">
+            <!-- HEADER PAGE -->
+            <header class="page-header">
+                <div class="page-title">
+                    <h1>Dashboard Pengelola</h1>
+                    <span class="page-description">
+                      Selamat datang di Kostku
+                    </span>
+                </div>
+            </header>
+
+            <!-- CONTENT -->
+
+            <!-- DASHBOARD - CARDS -->
+            <div class="dashboard-cards">
+                <div class="dashboard-card card-yellow">
+                    <div class="card-header">
+                        <img src="img/penghuni-dashboard-icon.png">
+                    </div>
+                    <h4>Total Penghuni</h4>
+                    <h2>3</h2>
+                </div>
+                <div class="dashboard-card card-green">
+                    <div class="card-header">
+                        <img src="img/kamar-terisi-dashboard-icon.png">
+                    </div>
+                    <h4>Kamar Terisi</h4>
+                    <h2>3</h2>
+                </div>
+                <div class="dashboard-card card-red">
+                    <div class="card-header">
+                        <img src="img/kamar-kosong-dashboard-icon.png">
+                    </div>
+                    <h4>Kamar Kosong</h4>
+                    <h2>3</h2>
+                </div>
+                <div class="dashboard-card card-blue">
+                    <div class="card-header">
+                        <img src="img/pendapatan-dashboard-icon.png">
+                    </div>
+                    <h4>Pendapatan Bulan Ini</h4>
+                    <h2>Rp1.000.000</h2>
+                </div>
+            </div>
+
+            <div class="dashboard-bottom">
+                <!-- DASHBOARD - PEMBAYARAN -->
+                <div class="dashboard-box">
+                    <div class="box-header">
+                        <h3>Pembayaran Terbaru</h3>
+                        <a href="pages/pembayaran.html">Lihat Semua</a>
+                    </div>
+                    <div class="box-list">
+                        <div class="list-item">
+                            <span>P001 - Anto Subagja</span>
+                            <span>Rp500.000</span>
+                        </div>
+                        <div class="list-item">
+                            <span>P002 - Tono Sukamto</span>
+                            <span>Rp500.000</span>
+                        </div>
+                        <div class="list-item">
+                            <span>P003 - Saifullah Fattah</span>
+                            <span>Rp500.000</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- DASHBOARD - PENGADUAN -->
+                <div class="dashboard-box">
+                    <div class="box-header">
+                        <h3>Pengaduan Terbaru</h3>
+                        <a href="pages/pengaduan.html">Lihat Semua</a>
+                    </div>
+                    <div class="box-list">
+                        <div class="list-item">
+                            <span>Pengaduan AC Rusak</span>
+                        </div>
+                        <div class="list-item">
+                            <span>Pengaduan Lampu Mati</span>
+                        </div>
+                        <div class="list-item">
+                            <span>Pengaduan Kamar Kotor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+
 </html>

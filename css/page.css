@@ -1,87 +1,97 @@
 /* GLOBAL PAGE */
+
 .page {
-  padding: 20px;
-  font-family: "DM Sans", sans-serif;
+    padding: 20px;
+    font-family: "DM Sans", sans-serif;
 }
 
 .page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .page-header .page-title {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #f8f8f8;
 }
 
 .page-title h1 {
-  font-size: 28px;
-  font-weight: bold;
-
-  color: #4880ff;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4880ff;
 }
 
 .page-title span {
-  font-size: 16px;
-  color: #202224;
+    font-size: 16px;
+    color: #202224;
 }
+
 
 /* BUTTON */
+
 .btn {
-  background-color: #4880ff;
-  font-size: 14px;
-  font-weight: 500;
-  color: #fff;
-  border: none;
-  padding: 14px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+    background-color: #4880ff;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
+
 .btn:hover {
-  background-color: #e7eeff;
-  color: #4880ff;
+    background-color: #e7eeff;
+    color: #4880ff;
 }
+
 
 /* SEARCH BAR */
+
 .searchbar {
-  display: flex;
-  height: fit-content;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: white;
-}
-.search-box {
-  position: relative;
-  width: full;
-}
-.search-box input {
-  width: 100%;
-  padding: 14px 36px;
-  border-radius: 8px;
-  border: 1px solid #f8f8f8;
-  color: #686868;
-  background-color: #f8f8f8;
-  outline: none;
-}
-.search-icon {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  left: 22px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #9ca3af;
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
 }
 
+.search-box {
+    position: relative;
+    width: full;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 36px;
+    border-radius: 8px;
+    border: 1px solid #f8f8f8;
+    color: #686868;
+    background-color: #f8f8f8;
+    outline: none;
+}
+
+.search-icon {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+
 /* KAMAR PAGE */
+
 .btn-tambah {
     background-color: #4379F2;
     color: white;
@@ -92,7 +102,9 @@
     font-weight: bold;
 }
 
+
 /* Filter Tabs */
+
 .filter-group {
     display: flex;
     gap: 10px;
@@ -113,7 +125,7 @@
 .filter-btn.active {
     background-color: #eef2ff;
     border: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .filter-btn:hover {
@@ -122,24 +134,30 @@
     transition: all 0.3s ease;
 }
 
+
 /* CARD */
+
 .card {
     background: white;
     width: 300px;
     padding: 20px;
     border-radius: 12px;
     border: 1px solid #eee;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
+
 /* CARD HEADER */
+
 .card-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
+
 /* BADGE */
+
 .badge {
     background: #eef2ff;
     color: #4379F2;
@@ -161,7 +179,9 @@
     color: #ff9800;
 }
 
+
 /* BODY */
+
 .card-body {
     margin-bottom: 10px;
 }
@@ -178,7 +198,9 @@
     margin-bottom: 10px;
 }
 
+
 /* PRICE */
+
 .card-price {
     color: #4379F2;
     font-size: 20px;
@@ -190,13 +212,17 @@
     color: #888;
 }
 
+
 /* DIVIDER */
+
 .card-divider {
     border-top: 1px solid #eee;
     margin: 12px 0;
 }
 
+
 /* TENANT */
+
 .card-tenant {
     margin-bottom: 10px;
 }
@@ -211,13 +237,17 @@
     font-weight: bold;
 }
 
+
 /* ACTIONS */
+
 .actions {
     display: flex;
     gap: 12px;
 }
 
+
 /* ICON BUTTON */
+
 .btn-icon {
     background: none;
     border: none;
@@ -232,7 +262,9 @@
     transform: scale(1.1);
 }
 
+
 /* ICON COLORS */
+
 .edit-icon {
     color: #A8A100;
 }
@@ -241,181 +273,517 @@
     color: #FF5C5C;
 }
 
+
 /* MODAL STYLING */
+
 .modal {
-  background-color: white;
-  width: 90%;
-  max-width: 450px;
+    background-color: white;
+    width: 90%;
+    max-width: 450px;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.modal-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+}
+
+.close-btn {
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.form-control:focus {
+    border-color: #4379F2;
+    background-color: #fff;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.modal-footer .btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    text-align: center;
+    border: none;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    color: #4379F2;
+    border: 2px solid #4379F2;
+}
+
+.btn-save {
+    background-color: #4379F2;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #f24343;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* DETAIL KAMAR */
+
+.detail-value {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #f8f9fa; /* Warna abu-abu muda sesuai gambar */
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Memastikan card bisa diklik */
+.card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Supaya tombol edit/hapus tidak memicu modal detail */
+.actions {
+  z-index: 10;
+}
+
+
+/* OVERLAY MODAL */
+
+.overlay-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* SUCCESS BOX */
+
+.success-box {
+    background: white;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #4379F2;
+    border-radius: 50%;
+    color: #4379F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 24px;
+}
+
+.success-box p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+}
+
+
+/* PENGHUNI PAGE */
+
+
+/* PENGADUAN PENGHUNI */
+/* Container Utama */
+.pengaduan-penghuni {
+  padding: 20px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* Form Section */
+.form-section {
   padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Riwayat Section */
+.card-history {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 15px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+}
+
+.icon-msg {
+  background: #f0f4ff;
+  color: #4f75ff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.history-content {
+  flex: 1;
+}
+
+.complaint-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.complaint-desc {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 5px 0 0 0;
+}
+
+/* Status Badge */
+.badge-selesai {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* PENGADUAN PAGE */
+/* Container Grid untuk Kanan-Kiri */
+.grid-pengaduan {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Base Card */
+.card-complaint {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.card-header-flex { display: flex; gap: 12px; }
+
+.icon-wrapper {
+  background-color: #f0f4ff;
+  color: #4f75ff;
+  padding: 8px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.content-header { flex: 1; }
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.complaint-title { font-size: 1.1rem; font-weight: 700; margin: 0; }
+.complaint-subtitle { font-size: 0.9rem; color: #777; margin: 0; }
+
+/* Status Badges */
+.badge { padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
+.badge-baru { background: #fee2e2; color: #ef4444; }
+.badge-proses { background: #fef9c3; color: #a16207; }
+.badge-selesai { background: #dcfce7; color: #15803d; }
+
+/* Meta Row (P001 | KM001 | Tgl) */
+.meta-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.meta-divider { width: 1px; height: 14px; background-color: #eee; }
+
+/* Buttons */
+.button-group { display: flex; gap: 10px; }
+.btn-primary { background: #4f75ff; color: white; }
+.btn-full { flex: 1; } /* Digunakan saat hanya ada 1 tombol */
+
+.btn-outline-warning {
+  background: transparent;
+  border: 1.5px solid #ffcc00;
+  color: #a16207;
+}
+
+.btn-outline-success {
+  background: transparent;
+  border: 1.5px solid #22c55e;
+  color: #15803d;
+}
+
+/* Container Modal Khusus */
+.modal {
+  background: white;
   border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 450px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
+  border: 1px solid #f0f0f0;
 }
 
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .modal-header h2 {
-  font-size: 22px;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #111;
+  margin: 0;
 }
 
 .close-btn {
+  background: none;
+  border: none;
   font-size: 24px;
   color: #666;
   cursor: pointer;
-  border: none;
-  background: none;
 }
 
-.form-group {
-  margin-bottom: 18px;
+/* Box Detail Pengaduan (Warna Biru Muda) */
+.complaint-detail-box {
+  background-color: #f0f4ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
 }
 
-.form-group label {
+.detail-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.detail-desc {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 12px 0;
+}
+
+.detail-meta {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #888;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: 10px;
+}
+
+.meta-divider {
+  width: 1px;
+  height: 15px;
+  background-color: #ddd;
+}
+
+/* Form Styling */
+.label-respon {
   display: block;
-  font-size: 14px;
   font-weight: 600;
-  margin-bottom: 8px;
-  color: #333;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
 }
 
-.form-control {
+.text-area-respon {
   width: 100%;
-  padding: 12px 16px;
-  font-size: 14px;
-  border: 1px solid #f0f0f0;
-  border-radius: 10px;
+  min-height: 100px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
   background-color: #f9f9f9;
-  color: #333;
-  outline: none;
-  transition: border 0.2s;
+  resize: vertical;
+  font-family: inherit;
 }
 
-.form-control:focus {
-  border-color: #4379F2;
-  background-color: #fff;
-}
-
-.form-control::placeholder {
-  color: #aaa;
-}
-
-select.form-control {
-  appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  background-size: 16px;
-}
-
-.modal-footer {
+/* Footer & Buttons */
+.modal-footer-custom {
   display: flex;
   gap: 12px;
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
-.modal-footer .btn {
+.btn-cancel-outline {
   flex: 1;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-  text-align: center;
-  border: none;
-}
-
-.btn-cancel {
-  background-color: transparent;
-  color: #4379F2;
-  border: 2px solid #4379F2;
-}
-
-.btn-save {
-  background-color: #4379F2;
-  color: white;
-}
-
-.btn-delete {
-  background-color: #f24343;
-  color: white;
-  border: none;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
-/* OVERLAY MODAL */
-.overlay-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.3);
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* SUCCESS BOX */
-.success-box {
   background: white;
-  width: 300px;
-  padding: 30px;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 2px solid #4f75ff;
+  color: #4f75ff;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
+.btn-primary-full {
+  flex: 1.5;
+  background-color: #4f75ff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.icon {
-  width: 50px;
-  height: 50px;
-  border: 2px solid #4379F2;
-  border-radius: 50%;
-  color: #4379F2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 15px;
-  font-size: 24px;
+.btn-primary-full:hover {
+  background-color: #3f5ecf;
 }
-
-.success-box p {
-  font-size: 18px;
-  font-weight: bold;
-  color: #111;
-}
-
-/* PENGHUNI PAGE */
 
 @media (max-width: 1024px) {
   .page-title h1 {
     font-size: 24px;
   }
 
-  .page-title span {
-    font-size: 12px;
-  }
+/* DAHSBOARD PAGE */
 
   .btn {
     font-size: 12px;
@@ -432,30 +800,202 @@ select.form-control {
     width: 12px;
     height: 12px;
   }
+  .grid-pengaduan {
+    grid-template-columns: 1fr;
+  }
+
+/* DASHBOARD - container cards */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
-@media (max-width: 768px) {
-  .page-title h1 {
-    font-size: 20px;
-  }
 
-  .page-title span {
-    font-size: 10px;
-  }
 
-  .btn {
-    font-size: 10px;
-    padding: 14px 12px;
-  }
-  .searchbar {
-    padding: 6px;
-  }
-  .search-box input {
+/* DASHBOARD - card */
+
+.dashboard-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     width: 100%;
-    padding: 8px 30px;
-  }
-  .search-icon {
-    width: 10px;
-    height: 10px;
-    left: 18px;
-  }
+    max-width: 100%;
+}
+
+
+/* DASHBOARD - warna card */
+
+.card-yellow {
+    border: 1px solid #B39E04;
+}
+
+.card-yellow h2 {
+    color: #B39E04;
+}
+
+.card-green {
+    border: 1px solid #64CC4A;
+}
+
+.card-green h2 {
+    color: #64CC4A;
+}
+
+.card-red {
+    border: 1px solid #FE4332;
+}
+
+.card-red h2 {
+    color: #FE4332;
+}
+
+.card-blue {
+    border: 1px solid #4880FF;
+}
+
+.card-blue h2 {
+    color: #4880FF;
+}
+
+.dashboard-card h4 {
+    font-size: clamp(14px, 2vw, 19px);
+    font-weight: 400;
+    line-height: 140%;
+    color: black;
+}
+
+.dashboard-card h2 {
+    font-size: clamp(20px, 3vw, 33px);
+    font-weight: 700;
+    line-height: 140%;
+}
+
+.card-header img {
+    width: clamp(34px, 4vw, 44px);
+    height: auto;
+}
+
+
+/* DASHBOARD - bottom */
+
+.dashboard-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dashboard-box {
+    padding: clamp(16px, 2vw, 20px);
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* DASHBOARD - header box */
+
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.box-header h3 {
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 600;
+}
+
+.box-header a {
+    font-size: clamp(10px, 1.5vw, 14px);
+    color: #4880FF;
+    text-decoration: none;
+}
+
+.box-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.list-item img {
+    height: clamp(18px, 2.5vw, 26px);
+    width: auto;
+}
+
+@media (max-width: 1024px) {
+    .page-title h1 {
+        font-size: 24px;
+    }
+    .page-title span {
+        font-size: 12px;
+    }
+    .btn {
+        font-size: 12px;
+        padding: 14px 16px;
+    }
+    .searchbar {
+        padding: 8px;
+    }
+    .search-box input {
+        width: 100%;
+        padding: 10px 32px;
+    }
+    .search-icon {
+        width: 12px;
+        height: 12px;
+    }
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dashboard-bottom {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title h1 {
+        font-size: 20px;
+    }
+    .page-title span {
+        font-size: 10px;
+    }
+    .btn {
+        font-size: 10px;
+        padding: 14px 12px;
+    }
+    .searchbar {
+        padding: 6px;
+    }
+    .search-box input {
+        width: 100%;
+        padding: 8px 30px;
+    }
+    .search-icon {
+        width: 10px;
+        height: 10px;
+        left: 18px;
+    }
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+    .dashboard-bottom {
+        grid-template-columns: 1fr;
+    }
+}
 }
