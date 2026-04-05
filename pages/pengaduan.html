@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kostku - Pengaduan</title>
+    <title>Kostku - Kamar</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/page.css" />
+    <link rel="stylesheet" href="../css/form.css" />
   </head>
   <body>
     <div class="main">
@@ -18,13 +20,154 @@
         <!-- TOPBAR -->
         <div id="topbar"></div>
 
-        <!-- CONTENT -->
-        <main class="content" id="content">
-          <h1>Pengaduan</h1>
+        <!-- PENGADUAN PAGE -->
+        <main class="page pengaduan-page" id="content">
+          <header class="page-header">
+            <div class="page-title">
+              <h1>Pengaduan</h1>
+              <span class="page-description">Kelola dan respon pengaduan</span>
+            </div>
+          </header>
+
+          <!-- FILTER -->
+          <div class="filter-group">
+            <button class="filter-btn active">Semua</button>
+            <button class="filter-btn">Baru</button>
+            <button class="filter-btn">Diproses</button>
+            <button class="filter-btn">Selesai</button>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="grid">
+
+            <!-- CARD 1 -->
+              <div class="grid-pengaduan">
+                <div class="card card-complaint">
+                  <div class="card-header-flex">
+                    <div class="icon-wrapper">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <div class="content-header">
+                      <div class="title-row">
+                        <h3 class="complaint-title">WiFi ngelag</h3>
+                        <span class="badge badge-baru">Baru</span>
+                      </div>
+                      <p class="complaint-subtitle">WiFi lambat internetnya sudah dari kemarin</p>
+                    </div>
+                  </div>
+                  <div class="meta-info">
+                    <span class="meta-item">P001 - Anto Subagja</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-item">KM001</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-item">08/04/2026</span>
+                  </div>
+                  <div class="button-group">
+                    <button class="btn btn-primary">Balas</button>
+                    <button class="btn btn-outline-warning">Tandai diproses</button>
+                  </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card card-complaint">
+                  <div class="card-header-flex">
+                    <div class="icon-wrapper">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <div class="content-header">
+                      <div class="title-row">
+                        <h3 class="complaint-title">Lampu kamar mandi mati</h3>
+                        <span class="badge badge-proses">Proses</span>
+                      </div>
+                      <p class="complaint-subtitle">Lampu di kamar mandi tidak menyala</p>
+                    </div>
+                  </div>
+                  <div class="meta-info">
+                    <span class="meta-item">P001 - Anto Subagja</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-item">KM001</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-item">08/04/2026</span>
+                  </div>
+                  <div class="button-group">
+                    <button class="btn btn-primary">Balas</button>
+                    <button class="btn btn-outline-success">Tandai selesai</button>
+                  </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card card-complaint">
+                  <div class="card-header-flex">
+                    <div class="icon-wrapper">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <div class="content-header">
+                      <div class="title-row">
+                        <h3 class="complaint-title">WiFi ngelag</h3>
+                        <span class="badge badge-selesai">Selesai</span>
+                      </div>
+                      <p class="complaint-subtitle">WiFi lambat internetnya sudah dari kemarin</p>
+                    </div>
+                  </div>
+                  <div class="meta-info">
+                    <span class="meta-item">P001 - Anto Subagja</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-item">KM001</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-item">08/04/2026</span>
+                  </div>
+                  <div class="button-group">
+                    <button class="btn btn-primary btn-full">Balas</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </main>
       </div>
     </div>
 
+    <!-- MODAL TAMBAH KAMAR -->
+    <div id="modalBalas" class="modal" style="display: none;"> <div class="modal-header">
+        <h2>Balas Pengaduan</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+
+      <div class="complaint-detail-box">
+        <h3 class="detail-title">WiFi ngelag</h3>
+        <p class="detail-desc">WiFi lambat internetnya sudah dari kemarin</p>
+        <div class="detail-meta">
+          <span>P001 - Anto Subagja</span>
+          <span class="meta-divider"></span>
+          <span>KM001</span>
+        </div>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label class="label-respon">Respon Anda</label>
+          <textarea class="form-control text-area-respon" placeholder="Tulis respon untuk pengaduan ini" required></textarea>
+        </div>
+
+        <div class="modal-footer-custom">
+          <button type="button" class="btn btn-cancel-outline">Batal</button>
+          <button type="submit" class="btn btn-primary-full">Balas pengaduan</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- OVERLAY MODAL -->
+    <div id="overlayModal" class="overlay-modal" style="display: none;"></div>
+
+    <!-- SUCCESS OVERLAY -->
+    <div id="successOverlayBalas" class="overlay-modal" style="display: none;">
+      <div class="success-box">
+        <div class="icon">✓</div>
+        <p>Balasan berhasil dikirim</p>
+      </div>
+    </div>
+    
     <!-- SCRIPT -->
     <script src="../js/main.js"></script>
   </body>
